@@ -1743,3 +1743,10 @@ void yyfree (void * ptr )
 #line 4 "q1.l"
 
 
+void main() {
+    yylex();
+}
+
+int yywrap() {
+    return 1;
+}
