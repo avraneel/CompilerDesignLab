@@ -1,1 +1,54 @@
-{#include,Include Statement}<{stdio,Identifier} .{h,Identifier} >{int,Keyword} {main,Identifier} {(,Opening Separator} {),Closing Separator} {{,Opening Separator} {This,Identifier} {is,Identifier} {a,Identifier} {single,Identifier} {line,Identifier} {comment,Identifier} {int,Keyword} {abf99drt,Identifier} {Assignment operator} {0,Integer literal} {Terminator} {char,Keyword} {ch,Identifier} {Assignment operator} {'a',Character Literal}{Terminator} {int,Keyword} {b,Identifier} {Assignment operator} {Reference operator} {abf99drt,Identifier} {Terminator} {float,Keyword} {g,Identifier} {Assignment operator} {12.45,Floating point literal} {Terminator} {printf,Identifier} {(,Opening Separator} {"Hello World\n",String literal}{),Closing Separator} {Terminator} {},Closing Separator} 
+Including #include <stdio.h> at line 1. To be expanded by the preprocessor.
+Symbol Table
+
+{=	->	Type: Assignment operator,	Line: 8}
+{ch	->	Type: Identifier,	Line: 5}
+{5	->	Type: Integer Literal,	Line: 8}
+{long	->	Type: Identifier,	Line: 8}
+{if	->	Type: Identifier,	Line: 9}
+{)	->	Type: Closing separator,	Line: 13}
+{printf	->	Type: Identifier,	Line: 12}
+{float	->	Type: Keyword,	Line: 7}
+{=	->	Type: Assignment operator,	Line: 4}
+{an45	->	Type: Identifier,	Line: 9}
+{'a'	->				Type: Character Literal,	Line: 5}
+{30	->	Type: Integer Literal,	Line: 9}
+{(	->	Type: Opening Separator,	Line: 13}
+{an45	->	Type: Identifier,	Line: 6}
+{!=	->	Type: Relational operator,	Line: 9}
+{printf	->	Type: Identifier,	Line: 10}
+{(	->	Type: Opening Separator,	Line: 10}
+{{	->	Type: Opening Separator,	Line: 2}
+{&&	->	Type: Logical operator,	Line: 9}
+{)	->	Type: Closing separator,	Line: 9}
+{int	->	Type: Keyword,	Line: 2}
+{(	->	Type: Opening Separator,	Line: 12}
+{23	->	Type: Integer Literal,	Line: 4}
+{"Hello India\n"	->	Type: String Literal,	Line: 12}
+{&	->	Type: Reference Operator,	Line: 6}
+{=	->	Type: Assignment operator,	Line: 5}
+{printf	->	Type: Identifier,	Line: 13}
+{(	->	Type: Opening Separator,	Line: 9}
+{12.45	->	Type: Floating Point Literal,	Line: 7}
+{)	->	Type: Closing separator,	Line: 2}
+{b	->	Type: Identifier,	Line: 8}
+{"Less than 30\n"	->	Type: String Literal,	Line: 10}
+{}	->	Type: Closing separator,	Line: 14}
+{=	->	Type: Assignment operator,	Line: 6}
+{int	->	Type: Keyword,	Line: 4}
+{)	->	Type: Closing separator,	Line: 12}
+{char	->	Type: Keyword,	Line: 5}
+{)	->	Type: Closing separator,	Line: 10}
+{(	->	Type: Opening Separator,	Line: 2}
+{main	->	Type: Identifier,	Line: 2}
+{>=	->	Type: Relational operator,	Line: 9}
+{+	->	Type: Arithmetic operator,	Line: 8}
+{=	->	Type: Assignment operator,	Line: 7}
+{b	->	Type: Identifier,	Line: 6}
+{"Hello World\n"	->	Type: String Literal,	Line: 13}
+{an45	->	Type: Identifier,	Line: 9}
+{50	->	Type: Integer Literal,	Line: 9}
+{an45	->	Type: Identifier,	Line: 4}
+{g	->	Type: Identifier,	Line: 7}
+{3	->	Type: Integer Literal,	Line: 8}
+{int	->	Type: Keyword,	Line: 6}

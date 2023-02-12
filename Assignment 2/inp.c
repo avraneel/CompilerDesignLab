@@ -1,7 +1,14 @@
 #include <stdio.h>
-int main() {// This is a single line comment
-    int abf99drt = 0;
+int main() {
+    // This is a single line comment
+    int an45 = 23;
     char ch = 'a';
-    int b = &abf99drt;
+    int b = &an45;
     float g = 12.45;
-    printf("Hello World\n");}
+    long b = 3 + 5;
+    if(an45 >= 30 && an45 != 50)
+        printf("Less than 30\n");
+    //if(ch != 'g')
+        printf("Hello India\n");
+    printf("Hello World\n");
+}
