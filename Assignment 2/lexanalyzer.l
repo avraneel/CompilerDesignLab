@@ -4,7 +4,6 @@
     #include <math.h>
     #include "hash_table.c"
     int line_no = 1;
-    int char_no = 0;
     ht_hash_table* ht;
 %}
 
@@ -17,6 +16,7 @@ id              {letter}({letter}|{digit})*
 intlit          [-+]?{digit}+
 number          {digit}+(\.{digit}+)?(E[+-]?{digit}+)?
 singcomm        \/\/[^\n]*
+multicomm       \/\*[^\/\*]*\*\/
 stringlit       \"(\\.|[^"\\])*\"
 charlit         \'(\\.|[^\\])\'
 relop           [<>=!]=>?
@@ -33,7 +33,8 @@ term            ;
     }
 }
 
-{singcomm} {
+{singcomm}|{multicomm} {
+    fprintf(yyout,"Found comment=>\n%s\nat line %d\n", yytext, line_no);
     // Do nothing
 }
 
@@ -48,7 +49,7 @@ int|float|double|boolean|char|void|final {
 }
 
 #include[^\n]+ {
-    fprintf(yyout,"Including %s at line %d. To be expanded by the preprocessor.\n", yytext, line_no);
+    fprintf(yyout,"Found %s at line %d. This will be expanded during preprocessing.\n", yytext, line_no);
 }
 
 {arithop} {
@@ -175,6 +176,10 @@ int|float|double|boolean|char|void|final {
     ht_insert(ht, yytext, final);
 }
 
+[.\0] {
+    fprintf(yyout, "Lexical error occured on line %d while scanning %s\n", line_no, yytext);
+}
+
 %%
 
 int main() {
@@ -185,7 +190,7 @@ int main() {
 	yylex();
     fprintf(yyout,"Symbol Table\n\n");
     ht_print_hashtable(ht, yyout);
-    printf("%d\n",line_no);
+    printf("Lexical analysis completed.\n");
     return 0;
 }	
 

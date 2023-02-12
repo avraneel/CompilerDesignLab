@@ -1,53 +1,64 @@
-Including #include <stdio.h> at line 1. To be expanded by the preprocessor.
-Symbol Table
+Found #include <stdio.h> at line 1. This will be expanded during preprocessing.
+Found comment=>
+// This is a single line comment
+at line 3
+Found comment=>
+/*
+        multi line
+        comment */
+at line 10
+Found comment=>
+//if(ch != 'g')
+at line 14
+Symbol Table
 
 {=	->	Type: Assignment operator,	Line: 8}
 {ch	->	Type: Identifier,	Line: 5}
 {5	->	Type: Integer Literal,	Line: 8}
 {long	->	Type: Identifier,	Line: 8}
-{if	->	Type: Identifier,	Line: 9}
-{)	->	Type: Closing separator,	Line: 13}
-{printf	->	Type: Identifier,	Line: 12}
+{if	->	Type: Identifier,	Line: 12}
+{)	->	Type: Closing separator,	Line: 16}
+{printf	->	Type: Identifier,	Line: 15}
 {float	->	Type: Keyword,	Line: 7}
 {=	->	Type: Assignment operator,	Line: 4}
-{an45	->	Type: Identifier,	Line: 9}
+{an45	->	Type: Identifier,	Line: 12}
 {'a'	->				Type: Character Literal,	Line: 5}
-{30	->	Type: Integer Literal,	Line: 9}
-{(	->	Type: Opening Separator,	Line: 13}
+{30	->	Type: Integer Literal,	Line: 12}
+{(	->	Type: Opening Separator,	Line: 16}
 {an45	->	Type: Identifier,	Line: 6}
-{!=	->	Type: Relational operator,	Line: 9}
-{printf	->	Type: Identifier,	Line: 10}
-{(	->	Type: Opening Separator,	Line: 10}
+{!=	->	Type: Relational operator,	Line: 12}
+{printf	->	Type: Identifier,	Line: 13}
+{(	->	Type: Opening Separator,	Line: 13}
 {{	->	Type: Opening Separator,	Line: 2}
-{&&	->	Type: Logical operator,	Line: 9}
-{)	->	Type: Closing separator,	Line: 9}
+{&&	->	Type: Logical operator,	Line: 12}
+{)	->	Type: Closing separator,	Line: 12}
 {int	->	Type: Keyword,	Line: 2}
-{(	->	Type: Opening Separator,	Line: 12}
+{(	->	Type: Opening Separator,	Line: 15}
 {23	->	Type: Integer Literal,	Line: 4}
-{"Hello India\n"	->	Type: String Literal,	Line: 12}
+{"Hello India\n"	->	Type: String Literal,	Line: 15}
 {&	->	Type: Reference Operator,	Line: 6}
 {=	->	Type: Assignment operator,	Line: 5}
-{printf	->	Type: Identifier,	Line: 13}
-{(	->	Type: Opening Separator,	Line: 9}
+{printf	->	Type: Identifier,	Line: 16}
+{(	->	Type: Opening Separator,	Line: 12}
 {12.45	->	Type: Floating Point Literal,	Line: 7}
 {)	->	Type: Closing separator,	Line: 2}
 {b	->	Type: Identifier,	Line: 8}
-{"Less than 30\n"	->	Type: String Literal,	Line: 10}
-{}	->	Type: Closing separator,	Line: 14}
+{"Less than 30\n"	->	Type: String Literal,	Line: 13}
+{}	->	Type: Closing separator,	Line: 17}
 {=	->	Type: Assignment operator,	Line: 6}
 {int	->	Type: Keyword,	Line: 4}
-{)	->	Type: Closing separator,	Line: 12}
+{)	->	Type: Closing separator,	Line: 15}
 {char	->	Type: Keyword,	Line: 5}
-{)	->	Type: Closing separator,	Line: 10}
+{)	->	Type: Closing separator,	Line: 13}
 {(	->	Type: Opening Separator,	Line: 2}
 {main	->	Type: Identifier,	Line: 2}
-{>=	->	Type: Relational operator,	Line: 9}
+{>=	->	Type: Relational operator,	Line: 12}
 {+	->	Type: Arithmetic operator,	Line: 8}
 {=	->	Type: Assignment operator,	Line: 7}
 {b	->	Type: Identifier,	Line: 6}
-{"Hello World\n"	->	Type: String Literal,	Line: 13}
-{an45	->	Type: Identifier,	Line: 9}
-{50	->	Type: Integer Literal,	Line: 9}
+{"Hello World\n"	->	Type: String Literal,	Line: 16}
+{an45	->	Type: Identifier,	Line: 12}
+{50	->	Type: Integer Literal,	Line: 12}
 {an45	->	Type: Identifier,	Line: 4}
 {g	->	Type: Identifier,	Line: 7}
 {3	->	Type: Integer Literal,	Line: 8}
