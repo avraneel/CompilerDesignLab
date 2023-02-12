@@ -7,35 +7,41 @@
 %}
 
 /* Regular definitions */
-letter          [a-zA-Z]
+delim           [ \t\n]
+ws              {delim}+
+letter          [A-Za-z]
 digit           [0-9]
-singcomm        "//"[^\n]*
-intlit          [-+]?[0-9]*
-floatlit        [-+]?[1-9][0-9]*"."[0-9]+[^\0]
-charlit         '.'
-id              [a-zA-Z][0-9a-zA-Z]*
-delim           [ \t\n]+
-term            ;
+id              {letter}({letter}|{digit})*
+intlit          [-+]?{digit}+
+number          {digit}+(\.{digit}+)?(E[+-]?{digit}+)?
+singcomm        "//"[^n]
+stringlit       \"(\\.|[^"\\])*\"
+charlit         \'(\\.|[^\\])\'
 opsep           [{(]
 closesep        [})]
-
+term            ;
 %%
 
+{ws} {
+    // Do nothing
+    //fprintf(yyout, "{ws}", yytext);
+}
+
 {singcomm} {
-    fprintf(yyout,"{Single Line Comment} ");
+    // Do nothing
     line_no++;
 }
 
-{delim} {
-    fprintf(yyout,"{Delimter} ");
-}
-
-int|float|double|boolean|char|void|final|printf {
+int|float|double|boolean|char|void|final {
     fprintf(yyout,"{%s,Keyword} ", yytext);
 }
 
 #include {
     fprintf(yyout,"{%s,Include Statement}", yytext);
+}
+
+{stringlit} {
+    fprintf(yyout, "{%s,String literal}", yytext);
 }
 
 {id} {
@@ -59,7 +65,7 @@ int|float|double|boolean|char|void|final|printf {
     fprintf(yyout,"{%s,Integer literal} ",yytext);
 }
 
-{floatlit} {
+{number} {
     fprintf(yyout,"{%s,Floating point literal} ",yytext);
 }
 
