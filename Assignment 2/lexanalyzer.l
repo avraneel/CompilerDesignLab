@@ -185,8 +185,8 @@ int|float|double|boolean|char|void|final {
 int main() {
     extern FILE *yyin, *yyout;
     ht  = ht_new();
-    yyin = fopen("inp.c", "r");
-    yyout = fopen("op.txt", "w+");
+    yyin = fopen("input.c", "r");
+    yyout = fopen("output.txt", "w+");
 	yylex();
     fprintf(yyout,"Symbol Table\n\n");
     ht_print_hashtable(ht, yyout);
