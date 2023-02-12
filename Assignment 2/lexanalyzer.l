@@ -7,7 +7,6 @@
     ht_hash_table* ht;
 %}
 
-/* Regular definitions */
 delim           [ \t\n\v]
 ws              {delim}+
 letter          [A-Za-z]
@@ -22,8 +21,7 @@ charlit         \'(\\.|[^\\])\'
 relop           [<>=!]=>?
 arithop         "+"|"-"|"*"|"/"|"%"|"^"
 logicop         "&&"|"||"|"!"
-opsep           [{(]
-closesep        [})]
+sep             [{()},]
 term            ;
 %%
 
@@ -35,10 +33,9 @@ term            ;
 
 {singcomm}|{multicomm} {
     fprintf(yyout,"Found comment=>\n%s\nat line %d\n", yytext, line_no);
-    // Do nothing
 }
 
-int|float|double|boolean|char|void|final {
+int|float|double|boolean|char|void|final|if|else {
     char *values = malloc(sizeof(int));
     sprintf(values, "%d", line_no);
     char *s = "Type: Keyword,\tLine: ";
@@ -103,17 +100,7 @@ int|float|double|boolean|char|void|final {
 }
 
 {term} {
-    //fprintf(yyout,"{Terminator} ");
-}
-
-& {
-    char *values = malloc(sizeof(int));
-    sprintf(values, "%d", line_no);
-    char *s = "Type: Reference Operator,\tLine: ";
-    char *final = malloc(strlen(s) + strlen(values)+1);
-    strcat(final, s);
-    strcat(final, values);
-    ht_insert(ht, yytext, final);
+    //Doing nothing for now
 }
 
 "=" {
@@ -156,20 +143,10 @@ int|float|double|boolean|char|void|final {
     ht_insert(ht, yytext, final);
 }
 
-{opsep} {
+{sep} {
     char *values = malloc(sizeof(int));
     sprintf(values, "%d", line_no);
-    char *s = "Type: Opening Separator,\tLine: ";
-    char *final = malloc(strlen(s) + strlen(values)+1);
-    strcat(final, s);
-    strcat(final, values);
-    ht_insert(ht, yytext, final);
-}
-
-{closesep} {
-    char *values = malloc(sizeof(int));
-    sprintf(values, "%d", line_no);
-    char *s = "Type: Closing separator,\tLine: ";
+    char *s = "Type: Separator,\tLine: ";
     char *final = malloc(strlen(s) + strlen(values)+1);
     strcat(final, s);
     strcat(final, values);

@@ -7,59 +7,58 @@ at line 3
         multi line
         comment */
 at line 10
-Found comment=>
-//if(ch != 'g')
-at line 14
-Symbol Table
+Symbol Table
 
 {=	->	Type: Assignment operator,	Line: 8}
 {ch	->	Type: Identifier,	Line: 5}
-{5	->	Type: Integer Literal,	Line: 8}
+{(	->	Type: Separator,	Line: 13}
+{long	->	Type: Identifier,	Line: 7}
 {long	->	Type: Identifier,	Line: 8}
-{if	->	Type: Identifier,	Line: 12}
-{)	->	Type: Closing separator,	Line: 16}
-{printf	->	Type: Identifier,	Line: 15}
-{float	->	Type: Keyword,	Line: 7}
+{if	->	Type: Keyword,	Line: 12}
+{printf	->	Type: Identifier,	Line: 13}
+{float	->	Type: Keyword,	Line: 6}
 {=	->	Type: Assignment operator,	Line: 4}
 {an45	->	Type: Identifier,	Line: 12}
 {'a'	->				Type: Character Literal,	Line: 5}
 {30	->	Type: Integer Literal,	Line: 12}
-{(	->	Type: Opening Separator,	Line: 16}
-{an45	->	Type: Identifier,	Line: 6}
+{"Ans: %d\n"	->	Type: String Literal,	Line: 9}
+{an45	->	Type: Identifier,	Line: 8}
 {!=	->	Type: Relational operator,	Line: 12}
-{printf	->	Type: Identifier,	Line: 13}
-{(	->	Type: Opening Separator,	Line: 13}
-{{	->	Type: Opening Separator,	Line: 2}
-{&&	->	Type: Logical operator,	Line: 12}
-{)	->	Type: Closing separator,	Line: 12}
+{printf	->	Type: Identifier,	Line: 9}
+{35	->	Type: Integer Literal,	Line: 7}
+{{	->	Type: Separator,	Line: 2}
+{{	->	Type: Separator,	Line: 12}
+{)	->	Type: Separator,	Line: 9}
 {int	->	Type: Keyword,	Line: 2}
-{(	->	Type: Opening Separator,	Line: 15}
+{(	->	Type: Separator,	Line: 12}
 {23	->	Type: Integer Literal,	Line: 4}
-{"Hello India\n"	->	Type: String Literal,	Line: 15}
-{&	->	Type: Reference Operator,	Line: 6}
-{=	->	Type: Assignment operator,	Line: 5}
-{printf	->	Type: Identifier,	Line: 16}
-{(	->	Type: Opening Separator,	Line: 12}
-{12.45	->	Type: Floating Point Literal,	Line: 7}
-{)	->	Type: Closing separator,	Line: 2}
-{b	->	Type: Identifier,	Line: 8}
 {"Less than 30\n"	->	Type: String Literal,	Line: 13}
-{}	->	Type: Closing separator,	Line: 17}
+{(	->	Type: Separator,	Line: 15}
+{printf	->	Type: Identifier,	Line: 15}
+{=	->	Type: Assignment operator,	Line: 5}
+{}	->	Type: Separator,	Line: 14}
+{(	->	Type: Separator,	Line: 9}
+{12.45	->	Type: Floating Point Literal,	Line: 6}
+{)	->	Type: Separator,	Line: 2}
+{b	->	Type: Identifier,	Line: 8}
+{)	->	Type: Separator,	Line: 15}
+{,	->	Type: Separator,	Line: 9}
+{c	->	Type: Identifier,	Line: 9}
 {=	->	Type: Assignment operator,	Line: 6}
 {int	->	Type: Keyword,	Line: 4}
-{)	->	Type: Closing separator,	Line: 15}
+{)	->	Type: Separator,	Line: 13}
 {char	->	Type: Keyword,	Line: 5}
-{)	->	Type: Closing separator,	Line: 13}
-{(	->	Type: Opening Separator,	Line: 2}
+{)	->	Type: Separator,	Line: 12}
+{(	->	Type: Separator,	Line: 2}
 {main	->	Type: Identifier,	Line: 2}
 {>=	->	Type: Relational operator,	Line: 12}
 {+	->	Type: Arithmetic operator,	Line: 8}
 {=	->	Type: Assignment operator,	Line: 7}
-{b	->	Type: Identifier,	Line: 6}
-{"Hello World\n"	->	Type: String Literal,	Line: 16}
+{b	->	Type: Identifier,	Line: 7}
+{c	->	Type: Identifier,	Line: 8}
 {an45	->	Type: Identifier,	Line: 12}
 {50	->	Type: Integer Literal,	Line: 12}
 {an45	->	Type: Identifier,	Line: 4}
-{g	->	Type: Identifier,	Line: 7}
-{3	->	Type: Integer Literal,	Line: 8}
-{int	->	Type: Keyword,	Line: 6}
+{g	->	Type: Identifier,	Line: 6}
+{"Hello World\n"	->	Type: String Literal,	Line: 15}
+{&&	->	Type: Logical operator,	Line: 12}
